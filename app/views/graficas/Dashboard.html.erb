@@ -1,0 +1,85 @@
+ <%= stylesheet_link_tag 'application' %>
+<%= stylesheet_link_tag 'style' %>
+<%= javascript_include_tag "chart", "highcharts", "exporting"  %>
+<div class="span10">
+
+
+
+<div class="well">
+    <div id="chart"></div>
+</div>
+
+
+
+<div class="row-fluid">
+    <div class="span4 well">
+        <div class="accordion" id="accordionQuickV">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a style="text-align: left;text-decoration: none" class="accordion-toggle btn btn-danger"
+                       data-toggle="collapse" data-parent="#accordion2" href="#collapseQuickV">
+                        <i class="icon-eye-open"></i> Vista Rapida <i class="icon-minus pull-right"></i>
+                    </a>
+                </div>
+                <div id="collapseQuickV" class="accordion-body collapse in">
+                    <div class="accordion-inner" style="background-color: #ffffff;">
+
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <table class="table ">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Component</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="label label-success">23</span></td>
+                                        <td><i class="icon-list-alt"></i> News</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-success">54</span></td>
+                                        <td><i class="icon-calendar"></i> Event</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-success">524</span></td>
+                                        <td><i class="icon-copy"></i> Articles</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-success">65</span></td>
+                                        <td><i class="icon-camera-retro"></i> Media</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><span class="label label-success">231</span></td>
+                                        <td><i class="icon-tags"></i> Tags</td>
+
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="span6">
+                                <table class="table ">
+                                    <thead>
+                                   
+                                    </thead>
+                                    <tbody>
+                        
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

@@ -1,0 +1,222 @@
+<h1>Parametro#listar</h1>
+
+
+ <!--  <%=  File.open('test.txt') {|f| f.readline} %>
+     <%=  @f2.class %>
+  <br />  <br />  <br />
+   <%  file = File.open('test.txt','r') do |file| %>
+    <%  while line = file.gets %>
+
+  <%= line %> <br />
+
+    <% end %>
+    <% end %>
+
+<h1>Archivos</h1>
+<% file = File.open('test.txt','r') %>
+El archivo existe ? : <%= File.exist?(file) %> <br>
+Tipo de archivo (extencion) : <%= File.extname(file) %> <br>
+Tiene permiso de lectura ? : <%= File.readable?(file) %> <br>
+Expandir ruta (absolute_path): <%= File.expand_path(file) %> <br>
+Directorio (relative_path) :<%= File.dirname(file) %> <br>
+stat :  <%= file.stat %>
+
+ -->
+
+
+<style type="text/css">
+/* tables */
+table.tablesorter {
+    font-family:arial;
+    background-color: #CDCDCD;
+    margin:10px 0pt 15px;
+    font-size: 8pt;
+    width: 100%;
+    text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    padding: 4px;
+}
+table.tablesorter thead tr .header {
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+table.tablesorter tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+    background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+table .header {
+    cursor: pointer;
+}
+
+table .header:after {
+  content: "";
+  float: right;
+  margin-top: 7px;
+  border-width: 0 4px 4px;
+  border-style: solid;
+  border-color: #000000 transparent;
+  visibility: hidden;
+}
+
+table .headerSortUp, table .headerSortDown {
+  background-color: #f7f7f9;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+table .header:hover:after {
+  visibility: visible;
+}
+
+table .headerSortDown:after, table .headerSortDown:hover:after {
+  visibility: visible;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+
+table .headerSortUp:after {
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000000;
+  visibility: visible;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+
+
+</style>
+
+
+
+<br><br>
+<script>
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+}
+ 
+table.table thead .sorting { background: url('images/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('images/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('images/sort_desc.png') no-repeat center right; }
+ 
+table.table thead .sorting_asc_disabled { background: url('images/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('images/sort_desc_disabled.png') no-repeat center right; }
+</script>
+
+
+<table cellpadding="0" cellspacing="0" border="1" class="able tablesorter table-striped table-bordered table-hover table-condensed" id="example">
+<script>
+$(document).ready(function() {
+    $('#example').dataTable( {
+        "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>"
+    } );
+} );
+</script>
+  <thead>
+  
+          <tr>  
+ 
+            <th>#</th>  
+            <th>Fecha</th>  
+            <th>Hora</th>  
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+            <th>Grade</th> 
+
+          </tr>  
+  
+  </thead>
+  <tbody>
+        <% @params.each do |row|%>
+    <tr>
+      <td> <%= row.param1 %></td>
+      <td> <%= row.param2 %></td>
+      <td> <%= row.param3 %></td> 
+      <td> <%= row.param4 %></td>
+      <td> <%= row.param5 %></td>
+      <td> <%= row.param6 %></td>
+      <td> <%= row.param7 %></td>
+      <td> <%= row.param8 %></td>
+      <td> <%= row.param9 %></td>
+      <td> <%= row.param10 %></td>
+      <td> <%= row.param11 %></td>
+      <td> <%= row.param12 %></td>
+      <td> <%= row.param13 %></td>
+      <td> <%= row.param14 %></td>
+      <td> <%= row.param15 %></td>
+      <td> <%= row.param16 %></td> 
+      <td> <%= row.param17 %></td>
+      <td> <%= row.param18 %></td>
+      <td> <%= row.param19 %></td>
+      <td> <%= row.param20 %></td>
+      <td> <%= row.param21 %></td>
+      <td> <%= row.param22 %></td>
+      <td> <%= row.param23 %></td>
+      <td> <%= row.param24 %></td>
+      <td> <%= row.param25 %></td> 
+  </tr>  
+  <% end %>
+  </tbody>
+
+
+<script>
+$.extend( $.fn.dataTableExt.oStdClasses, {
+    "sWrapper": "dataTables_wrapper form-inline"
+} );
+</script>
+
+
+</table>
+
+
+
+
+

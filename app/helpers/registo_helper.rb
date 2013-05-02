@@ -1,0 +1,2 @@
+module RegistoHelper
+end

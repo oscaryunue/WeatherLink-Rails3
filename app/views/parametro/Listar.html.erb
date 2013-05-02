@@ -1,0 +1,128 @@
+
+ <%= stylesheet_link_tag 'application' %>
+<%= stylesheet_link_tag 'style' %>
+<%= javascript_include_tag "jquery.dataTables", "DT_bootstrap"  %>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+            <table class="table table-hover" data-toggle="collapse"  id="example">
+            <thead>
+            <tr>  
+            <th>#</th>  
+            <th>Fecha</th>  
+            <th>Hora</th>  
+            <th>Temperatura Exterior</th> 
+            <th>Temperatura Máxima</th> 
+            <th>Temperatura Mínima</th> 
+            <th>Humedad Exterior</th> 
+            <th>Punto de Roció</th> 
+            <th>Velocidad de Viento</th> 
+            <th>Dirección de Viento</th> 
+            <th>Carrera del  viento</th> 
+            <th>Velocidad Máxima</th> 
+            <th>Dirección Máxima</th> 
+            <th>Enfriamiento del Viento</th> 
+            <th>Índice de Calor</th> 
+            <th>Índice THW</th> 
+            <th>Índice THSW</th> 
+            <th>Presión Barométrica</th> 
+            <th>Lluvia</th> 
+            <th>Intensidad de Lluvia</th> 
+            <th>Radiación Solar</th> 
+            <th>Energía Solar</th> 
+            <th>Radiación Solar Máxima</th> 
+            <th>Índice UV</th> 
+            <th>Dosis de UV</th> 
+            <th>UV Máxima</th> 
+            <th>Calor D-D</th> 
+            <th>Frio D-D</th> 
+            <th>Temperatura Interior</th> 
+            <th>Humedad Interior</th> 
+            <th>Roció Interior</th> 
+            <th>Calor Interior</th> 
+            <th>EMC Interior</th> 
+            <th>Densidad de Aire Interior</th> 
+            <th>Segunda Temperatura</th> 
+            <th>Segunda Humedad</th> 
+            <th>Evapotranspiración</th> 
+            <th>Hoja Húmeda 1</th> 
+            <th>Hoja Húmeda 2</th> 
+            <th>Temperatura de Hoja 1</th>
+            <th>Temperatura de Hoja 2</th> 
+            <th>Vientos Muestra</th> 
+            <th>Canal de recepción.</th> 
+            <th>Recepción ISS</th>
+            <th>Intervalo de Archivos</th> 
+          </tr>  
+  
+  </thead>
+  <tbody>
+        <% @params.each do |row|%>
+    <tr  class="info">
+      <td> <%= row.param1 %></td>
+      <td> <%= row.param2 %></td>
+      <td> <%= row.param3 %></td> 
+      <td> <%= row.param4 %></td>
+      <td> <%= row.param5 %></td>
+      <td> <%= row.param6 %></td>
+      <td> <%= row.param7 %></td>
+      <td> <%= row.param8 %></td>
+      <td> <%= row.param9 %></td>
+      <td> <%= row.param10 %></td>
+      <td> <%= row.param11 %></td>
+      <td> <%= row.param12 %></td>
+      <td> <%= row.param13 %></td>
+      <td> <%= row.param14 %></td>
+      <td> <%= row.param15 %></td>
+      <td> <%= row.param16 %></td> 
+      <td> <%= row.param17 %></td>
+      <td> <%= row.param18 %></td>
+      <td> <%= row.param19 %></td>
+      <td> <%= row.param20 %></td>
+      <td> <%= row.param21 %></td>
+      <td> <%= row.param22 %></td>
+      <td> <%= row.param23 %></td>
+      <td> <%= row.param24 %></td>
+      <td> <%= row.param25 %></td> 
+      <td> <%= row.param26 %></td> 
+      <td> <%= row.param27 %></td> 
+      <td> <%= row.param28 %></td> 
+      <td> <%= row.param29 %></td> 
+      <td> <%= row.param30 %></td> 
+      <td> <%= row.param31 %></td> 
+      <td> <%= row.param32 %></td> 
+      <td> <%= row.param33 %></td> 
+      <td> <%= row.param34 %></td> 
+      <td> <%= row.param35 %></td>      
+      <td> <%= row.param36 %></td> 
+      <td> <%= row.param37 %></td> 
+      <td> <%= row.param38 %></td> 
+      <td> <%= row.param39 %></td> 
+      <td> <%= row.param40 %></td> 
+      <td> <%= row.param41 %></td> 
+      <td> <%= row.param42 %></td> 
+      <td> <%= row.param43 %></td>
+      <td> <%= row.param44 %></td>
+      <td> <%= row.param45 %></td>  
+  </tr>  
+  <% end %>
+  </tbody>
+</table> 
+
+       
+
+<!-- 
+
+<div class="pagination">  
+  <ul>  
+    <li><a href="#">Prev</a></li>  
+    <li class="active">  
+      <a href="#">1</a>  
+    </li>  
+    <li><a href="#">2</a></li>  
+    <li><a href="#">3</a></li>  
+    <li><a href="#">4</a></li>  
+    <li><a href="#">Next</a></li>  
+  </ul>  
+-->
+
+ 
